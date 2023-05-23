@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main class="loginpage">
+      <div class="card" id="card">
+        <div class="card-header">
+          <div class="entrar select" id="entrar">
+            <p>Entrar</p>
+          </div>
+          <div class="cadastrar" id="cadastrar">
+          <p>Cadastrar</p>
+        </div>
+        </div>
+        <div class="card-entrar" id="card_entrar">
+        <h1 class="margin-1rem margin-bottom">Entrar</h1>
+        <form class="flex-column center" action="javascript:void(0);">
+
+            <label class="flex-column margin-bottom" for="email">Email:
+                <p id="alert_email" class="p_erro"></p>
+          <input onchange="validar_email()" id="email"  type="text" />
+        </label>
+
+        <label class="password flex-column margin-bottom" for="password">Senha:
+            <p id="alert_password" class="p_erro"></p>
+          <input onchange="validar_senha()" id="password" minlength="8" type="password" />
+          <p id="esqueceu">Esqueceu a senha?</p>
+        </label>
+          <button class="button-27" onclick="validar()">Entrar</button>
+        </form>
+      </div>
+      <div class="card-cadastrar none" id="card_cadastrar">
+        <h1 class="margin-1rem margin-bottom">Cadastrar</h1>
+        <form class="flex-column center" action="javascript:void(0);">
+
+          <label class="flex-column margin-bottom" for="email">Email:
+              <p id="alert_email" class="p_erro"></p>
+        <input onchange="validar_email()" id="email2"  type="text" />
+      </label>
+
+      <label class="password flex-column margin-bottom" for="password">Senha:
+          <p id="alert_password" class="p_erro"></p>
+        <input onchange="validar_senha()" id="password2" minlength="8" type="password" />
+        <p id="esqueceu">Esqueceu a senha?</p>
+      </label>
+        <button class="button-27" onclick="cadastro()">Entrar</button>
+      </form>
+      </div>
+    </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
